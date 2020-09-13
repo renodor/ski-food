@@ -1,4 +1,5 @@
 class Dish < ApplicationRecord
+  has_one_attached :photo
   belongs_to :category, optional: true
 
   validates :name, :price, presence: true

@@ -5,11 +5,11 @@
     <div class="dish-cards">
       <% category.dishes.each do |dish| %>
         <div class="dish-card">
-          <img src="https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/skateboard.jpg" />
+          <%= cl_image_tag dish.photo.key, height: 300, width: 400, crop: :fill %>
           <div class="dish-card-right">
             <h3><%= dish.name %></h3>
             <div class="dish-card-infos">
-              <span>Product description with <strong>relevant info</strong> only.</span>
+              <span><%= dish.description %></span>
               <span class="dish-card-price"><%= number_to_currency(dish.price, precision: 2) %></span>
             </div>
           </div>

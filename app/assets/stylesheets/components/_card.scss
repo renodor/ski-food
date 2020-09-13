@@ -15,6 +15,7 @@
     }
     .dish-card-right {
       padding: 16px;
+      width: 100%;
       h3 {
         font-family: "Adam CG Pro", "Helvetica", "sans-serif";
         font-size: 16px;
@@ -23,6 +24,7 @@
       .dish-card-infos {
         display: flex;
         align-items: flex-start;
+        justify-content: space-between;
         span {
           font-size: 14px;
           line-height: 1.4;

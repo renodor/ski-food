@@ -2,6 +2,13 @@
 <% @categories.each do |category| %>
   <%= category.name %>
   <% category.dishes.each do |dish| %>
-    <%= dish.name %>
+    <div class="dish-card">
+      <img src="https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/skateboard.jpg" />
+      <div class="dish-card-infos">
+        <h3><%= dish.name %></h3>
+        <p>Product description with <strong>relevant info</strong> only.</p>
+      </div>
+      <div class="dish-card-price"><%= dish.price %></div>
+    </div>
   <% end %>
 <% end %>

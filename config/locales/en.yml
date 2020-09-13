@@ -30,4 +30,6 @@
 # available at https://guides.rubyonrails.org/i18n.html.
 
 en:
-  hello: "Hello world"
+  hp-carousel:
+    slide1: "Best CheeseMountain Burgers of the Universe!"
+    slide2: "Eat, Ski & Repeat"

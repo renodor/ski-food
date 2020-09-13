@@ -1,4 +1,7 @@
 fr:
+  hp-carousel:
+    slide1: "Les Meilleurs CheeseMountain de l'Univers!"
+    slide2: "Bouffe, Ski, Repete"
   activerecord:
     errors:
       messages:

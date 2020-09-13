@@ -1,8 +1,9 @@
 Rails.application.routes.draw do
   devise_for :users
 
-  resources :categories, only: :index
+  scope '(:locale)', locale: /fr|en/ do
+    resources :categories, only: :index
 
-  root to: 'categories#index'
-  # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
+    root to: 'categories#index'
+  end
 end

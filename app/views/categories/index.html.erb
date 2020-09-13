@@ -1,0 +1,7 @@
+<%= render "shared/hp_carousel"  %>
+<% @categories.each do |category| %>
+  <%= category.name %>
+  <% category.dishes.each do |dish| %>
+    <%= dish.name %>
+  <% end %>
+<% end %>

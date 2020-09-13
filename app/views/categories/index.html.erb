@@ -1,14 +1,20 @@
 <%= render "shared/hp_carousel"  %>
-<% @categories.each do |category| %>
-  <%= category.name %>
-  <% category.dishes.each do |dish| %>
-    <div class="dish-card">
-      <img src="https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/skateboard.jpg" />
-      <div class="dish-card-infos">
-        <h3><%= dish.name %></h3>
-        <p>Product description with <strong>relevant info</strong> only.</p>
-      </div>
-      <div class="dish-card-price"><%= dish.price %></div>
+<div class="categories-container">
+  <% @categories.each do |category| %>
+    <h2><%= category.name %></h2>
+    <div class="dish-cards">
+      <% category.dishes.each do |dish| %>
+        <div class="dish-card">
+          <img src="https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/skateboard.jpg" />
+          <div class="dish-card-right">
+            <h3><%= dish.name %></h3>
+            <div class="dish-card-infos">
+              <span>Product description with <strong>relevant info</strong> only.</span>
+              <span class="dish-card-price"><%= number_to_currency(dish.price, precision: 2) %></span>
+            </div>
+          </div>
+        </div>
+      <% end %>
     </div>
   <% end %>
-<% end %>
+</div>

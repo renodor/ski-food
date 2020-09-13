@@ -6,17 +6,17 @@
 
 @font-face {
   font-family: "Track";
-  src: font-url('track.otf') format('truetype');
+  src: font-url('Track.otf') format('truetype');
   font-weight: 400;
 }
 
 
 // Import Google fonts
-@import url('https://fonts.googleapis.com/css2?family=Dosis:wght@300;400;700&display=swap" rel="stylesheet');
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;700');
 
 // Define fonts for body and headers
-$body-font: "Dosis", "Helvetica", "sans-serif";
-$headers-font: "Adam CG Pro", "Helvetica", "sans-serif";
+$body-font: "Open Sans", "Helvetica", "sans-serif";
+$headers-font: "Track", "Helvetica", "sans-serif";
 
 // To use a font file (.woff) uncomment following lines
 // @font-face {

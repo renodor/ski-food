@@ -4,6 +4,7 @@ Rails.application.routes.draw do
   scope '(:locale)', locale: /fr|en/ do
     resources :categories, only: :index
 
+    resources :dishes, only: :show
     root to: 'categories#index'
   end
 end

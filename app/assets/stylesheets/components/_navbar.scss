@@ -1,12 +1,16 @@
-.navbar-lewagon {
+.navbar-skifood {
   justify-content: space-between;
-  background: white;
+  background: transparent;
+  position: fixed;
+  top: 0;
+  z-index: 100;
+  width: 100%;
 }
 
-.navbar-lewagon .navbar-collapse {
+.navbar-skifood .navbar-collapse {
   flex-grow: 0;
 }
 
-.navbar-lewagon .navbar-brand img {
+.navbar-skifood .navbar-brand img {
   width: 40px;
 }

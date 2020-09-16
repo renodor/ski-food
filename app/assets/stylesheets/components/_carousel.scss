@@ -1,6 +1,9 @@
 #hpCarousel {
-  img {
-    height: calc(100vh - 66px);
-    object-fit: cover;
+  .carousel-item {
+    height: 100vh;
+    background-size: cover;
+    .carousel-caption {
+      bottom: 20%;
+    }
   }
 }

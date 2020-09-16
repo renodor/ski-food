@@ -1,16 +1,14 @@
 <div id="hpCarousel" class="carousel slide" data-ride="carousel">
   <div class="carousel-inner">
-    <div class="carousel-item active">
-      <%= image_tag 'skifood-hp-carousel1.jpg', class: "d-block w-100" %>
+    <div class="carousel-item active" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.5)), url(<%= asset_path 'skifood-hp-carousel1.jpg' %>);">
       <div class="carousel-caption">
-        <h2><%= t('hp-carousel.slide1') %></h2>
+        <h1><%= t('hp-carousel.slide1') %></h1>
         <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
       </div>
     </div>
-    <div class="carousel-item">
-      <%= image_tag 'skifood-hp-carousel2.jpg', class: "d-block w-100" %>
+    <div class="carousel-item" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.5)), url(<%= asset_path 'skifood-hp-carousel2.jpg' %>);">
       <div class="carousel-caption">
-        <h2><%= t('hp-carousel.slide2') %></h2>
+        <h1><%= t('hp-carousel.slide2') %></h1>
         <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
       </div>
     </div>
@@ -24,3 +22,4 @@
     <span class="sr-only">Next</span>
   </a>
 </div>
+

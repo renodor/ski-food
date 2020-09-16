@@ -28,8 +28,12 @@
       }
     }
   }
-  .navbar-toggler .navbar-toggler-icon path {
-    transition: stroke .4s ease;
+  .navbar-toggler {
+    .navbar-toggler-icon {
+      path {
+        transition: stroke .4s ease;
+      }
+    }
   }
   .navbar-collapse {
     flex-grow: 0;
@@ -52,11 +56,60 @@
         }
       }
     }
-    .navbar-toggler .navbar-toggler-icon path {
+    .navbar-toggler .navbar-toggler-icon .mobile-toggle-icon {
       stroke: $dark-gray;
       transition: stroke .4s ease;
     }
   }
 }
 
+@mixin menu-toggle-element {
+  width: 40px;
+  height: 2px;
+  background-color: $dark-gray;
+  display: block;
+}
+
+#menu-toggle {
+  &:focus {
+    outline: none;
+  }
+}
+
+.menu-toggle span {
+  @include menu-toggle-element;
+  transition: background-color .2s linear;
+  &::before, &::after {
+    @include menu-toggle-element;
+    position: absolute;
+    content: '';
+  }
+}
+
+
+.menu-toggle span, .menu-toggle span:before, .menu-toggle span:after {
+}
+.menu-toggle span:before {
+  margin-top: -12px;
+  transition: margin .2s linear, transform .2s linear;
+}
+.menu-toggle span:after {
+  margin-top: 12px;
+  transition: margin .2s linear, transform .2s linear;
+}
+
+.menu-toggle-active span {
+  background-color: rgba(0,0,0,0);
+  transition: background-color .3s linear;
+}
+.menu-toggle-active span:before {
+  margin-top: 0;
+  transform: rotate(45deg);
+  transition: margin .2s linear, transform .2s linear;
+}
+.menu-toggle-active span:after {
+  margin-top: 0;
+  transform: rotate(-45deg);
+  transition: margin .2s linear, transform .2s linear;
+}
 

@@ -1,7 +1,10 @@
 <div class="navbar navbar-expand-sm navbar-light navbar-skifood">
   <%= link_to "#", class: "navbar-brand" do %>
-    <%= image_tag "https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/logo.png" %>
-    <% end %>
+    <%= inline_svg_tag("logo-skifood.svg") %>
+    <div class="navbar-name">
+      <span>SKI</span> <span>FOOD</span>
+    </div>
+  <% end %>
 
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>

@@ -6,8 +6,46 @@
   z-index: 100;
   width: 100%;
   transition: background .4s ease;
-  &.bg-white {
+  .navbar-brand {
+    display: flex;
+    align-items: flex-start;
+    padding: 10px 10px 5px 10px;
+    color: white;
+    transition: color .4s ease;
+    svg {
+      width: 45px;
+      margin-right: 20px;
+      .logo-element {
+        transition: fill .4s ease;
+      }
+    }
+    .navbar-name {
+      font-family: "Azedo Bold", "Helvetica", "sans-serif";
+      line-height: 1;
+      font-size: 50px;
+      span:nth-child(2) {
+        color: $red;
+      }
+    }
+  }
+  &.white {
+    background-color: white;
     box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
+    .navbar-brand {
+      color: $dark-gray;
+      transition: color .4s ease;
+      svg {
+        .logo-element {
+          transition: fill .4s ease;
+        }
+        #haut, #bas {
+          fill: $dark-gray;
+        }
+        #steak {
+          fill: $red;
+        }
+      }
+    }
   }
 }
 
@@ -15,6 +53,3 @@
   flex-grow: 0;
 }
 
-.navbar-skifood .navbar-brand img {
-  width: 40px;
-}

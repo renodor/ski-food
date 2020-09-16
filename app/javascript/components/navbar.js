@@ -3,9 +3,9 @@ const navBar = () => {
   if (navBar) {
     window.addEventListener('scroll', () => {
       if (window.scrollY >= navBar.offsetHeight) {
-        navBar.classList.add('bg-white');
+        navBar.classList.add('white');
       } else {
-        navBar.classList.remove('bg-white');
+        navBar.classList.remove('white');
       }
     });
   }

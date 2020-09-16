@@ -1,4 +1,4 @@
-<div class="navbar navbar-expand-sm navbar-light navbar-skifood">
+<div class="navbar navbar-expand-sm navbar-skifood">
   <%= link_to "#", class: "navbar-brand" do %>
     <%= inline_svg_tag("logo-skifood.svg") %>
     <div class="navbar-name">
@@ -7,7 +7,9 @@
   <% end %>
 
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-    <span class="navbar-toggler-icon"></span>
+    <span class="navbar-toggler-icon">
+      <%= inline_svg_tag("mobile-toggle-icon.svg") %>
+    </span>
   </button>
 
 

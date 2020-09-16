@@ -28,6 +28,12 @@
       }
     }
   }
+  .navbar-toggler .navbar-toggler-icon path {
+    transition: stroke .4s ease;
+  }
+  .navbar-collapse {
+    flex-grow: 0;
+  }
   &.white {
     background-color: white;
     box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
@@ -46,10 +52,11 @@
         }
       }
     }
+    .navbar-toggler .navbar-toggler-icon path {
+      stroke: $dark-gray;
+      transition: stroke .4s ease;
+    }
   }
 }
 
-.navbar-skifood .navbar-collapse {
-  flex-grow: 0;
-}
 

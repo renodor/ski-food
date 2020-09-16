@@ -1,4 +1,3 @@
-<%= render "shared/hp_carousel"  %>
 <div class="categories-container">
   <% @categories.each do |category| %>
     <h2><%= category.name %></h2>
@@ -13,6 +12,7 @@
               <span class="dish-card-price"><%= number_to_currency(dish.price, precision: 2) %></span>
             </div>
           </div>
+          <%= link_to '', dish_path(dish)  %>
         </div>
       <% end %>
     </div>

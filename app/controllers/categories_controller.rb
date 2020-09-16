@@ -3,5 +3,6 @@ class CategoriesController < ApplicationController
 
   def index
     @categories = Category.includes(dishes: [photo_attachment: :blob])
+    render layout: 'home_page'
   end
 end

@@ -1,6 +1,7 @@
 .dish-cards {
   margin: 10px 0 30px 0;
   .dish-card {
+    position: relative;
     overflow: hidden;
     height: 120px;
     background: white;
@@ -35,6 +36,13 @@
         }
       }
     }
+  }
+  a {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
   }
 }
 

@@ -29,15 +29,61 @@
       }
     }
   }
-  .navbar-toggler {
-    .navbar-toggler-icon {
-      path {
-        transition: stroke .4s ease;
-      }
-    }
-  }
   .navbar-collapse {
     flex-grow: 0;
+  }
+  #menu-toggle {
+    padding: 15px 25px;
+    &:focus {
+      outline: none;
+    }
+    .menu-toggle-inner {
+      display: flex;
+      padding: 0;
+      position: relative;
+      align-items: center;
+      height: 30px;
+      width: 40px;
+      &:focus {
+        outline: none;
+      }
+      span {
+        height: 2px;
+        width: 100%;
+        background-color: $red;
+        transition: background-color .2s linear;
+      }
+      &:before, &:after {
+        position: absolute;
+        content: '';
+        height: 2px;
+        width: 100%;
+        background-color: white;
+        transition: top .1s linear .1s, bottom .1s linear .1s, transform .1s linear, background-color .2s linear;
+      }
+      &:before {
+        top: 0;
+      }
+      &:after {
+        bottom: 0;
+      }
+    }
+    &.active .menu-toggle-inner {
+      &:before {
+        top: 14px;
+        transform: rotate(45deg);
+        transition: top .1s linear, transform .1s linear .1s;
+      }
+      &:after {
+        bottom: 14px;
+        transform: rotate(-45deg);
+        transition: bottom .1s linear, transform .1s linear .1s;
+      }
+      span {
+        background-color: rgba(0,0,0,0);
+        transition: background-color .2s linear;
+      }
+    }
   }
   &.white {
     background-color: white;
@@ -57,66 +103,11 @@
         }
       }
     }
-    .navbar-toggler .navbar-toggler-icon .mobile-toggle-icon {
-      stroke: $dark-gray;
-      transition: stroke .4s ease;
+    #menu-toggle .menu-toggle-inner {
+      &:before, &:after {
+        background-color: $dark-gray;
+      }
     }
   }
 }
 
-@mixin menu-toggle-element {
-  height: 2px;
-  width: 100%;
-  background-color: $dark-gray;
-}
-
-#menu-toggle {
-  padding: 15px 25px;
-  &:focus {
-    outline: none;
-  }
-  .menu-toggle {
-    display: flex;
-    padding: 0;
-    position: relative;
-    align-items: center;
-    height: 30px;
-    width: 40px;
-    &:focus {
-      outline: none;
-    }
-    &:before, &:after {
-      @include menu-toggle-element;
-      position: absolute;
-      content: '';
-      transition: top .1s linear .1s, bottom .1s linear .1s, transform .1s linear;
-    }
-    &:before {
-      top: 0;
-    }
-    &:after {
-      bottom: 0;
-      outline: 3px solid white;
-    }
-    span {
-      @include menu-toggle-element;
-      transition: background-color .2s linear;
-    }
-  }
-  &.active .menu-toggle {
-    &:before {
-      top: 14px;
-      transform: rotate(45deg);
-      transition: top .1s linear, transform .1s linear .1s;
-    }
-    &:after {
-      bottom: 14px;
-      transform: rotate(-45deg);
-      transition: bottom .1s linear, transform .1s linear .1s;
-    }
-    span {
-      background-color: rgba(0,0,0,0);
-      transition: background-color .2s linear;
-    }
-  }
-}

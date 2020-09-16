@@ -11,7 +11,7 @@ const navBar = () => {
     });
 
     menuToggle.addEventListener('click', event => {
-      event.currentTarget.classList.toggle('menu-toggle-active')
+      event.currentTarget.classList.toggle('active')
     })
   }
 }

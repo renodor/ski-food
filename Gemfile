@@ -36,6 +36,9 @@ gem 'simple_form'
 
 gem 'cloudinary', '~> 1.16.0'
 
+# helper to handle svg files
+gem 'inline_svg'
+
 group :development, :test do
   gem 'pry-byebug'
   gem 'pry-rails'

@@ -40,9 +40,9 @@ gem 'cloudinary', '~> 1.16.0'
 gem 'inline_svg'
 
 group :development, :test do
+  gem 'dotenv-rails'
   gem 'pry-byebug'
   gem 'pry-rails'
-  gem 'dotenv-rails'
 
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug', platforms: %I[mri mingw x64_mingw]
@@ -53,7 +53,6 @@ group :development do
   gem 'bullet'
 
   # Access an interactive console on exception pages or by calling 'console' anywhere in the code.
-  gem 'web-console', '>= 3.3.0'
   gem 'listen', '~> 3.2'
   # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
   gem 'spring'
@@ -61,6 +60,7 @@ group :development do
 
   gem 'overcommit'
   gem 'rubocop', require: false
+  gem 'web-console', '>= 3.3.0'
 end
 
 group :test do

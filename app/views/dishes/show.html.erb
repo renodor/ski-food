@@ -1,7 +1,9 @@
 <div class="dish-card">
   <%= cl_image_tag @dish.photo.key %>
   <h1><%= @dish.name %></h1>
-  <div class="container">
-    <%= @dish.description %>
+  <div class="ingredients-grid">
+    <% @dish.ingredients.each do |ingredient| %>
+      <span><%= ingredient.capitalize %></span>
+    <% end %>
   </div>
 </div>

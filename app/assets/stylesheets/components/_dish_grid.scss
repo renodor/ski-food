@@ -15,7 +15,7 @@
       object-fit: cover;
     }
     .dish-grid-card-right {
-      padding: 16px;
+      padding: 0 16px;
       width: 100%;
       h3 {
         font-family: "Adam CG Pro", "Helvetica", "sans-serif";
@@ -30,6 +30,9 @@
           font-size: 14px;
           line-height: 1.4;
           text-transform: capitalize;
+          &:first-child {
+            margin-right: 10px;
+          }
         }
         .dish-grid-card-price {
           font-weight: 600;
@@ -47,6 +50,16 @@
   }
 }
 
+@media (max-width: 400px) {
+  .dish-grid {
+    .dish-grid-card {
+      height: 150px;
+      .dish-grid-card-right h3 {
+        font-size: 14px;
+      }
+    }
+  }
+}
 
 
 

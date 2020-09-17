@@ -112,3 +112,31 @@
   }
 }
 
+@media (max-width: 400px) {
+  .navbar-skifood {
+    .navbar-brand {
+      margin-right: 0;
+      svg {
+        width: 35px;
+      }
+      .navbar-name {
+        font-size: 40px;
+      }
+    }
+    #menu-toggle {
+      .menu-toggle-inner {
+        height: 26px;
+        width: 35px;
+      }
+      &.active .menu-toggle-inner {
+        &:before {
+          top: 12px;
+        }
+        &:after {
+          bottom: 12px;
+        }
+      }
+    }
+  }
+
+}

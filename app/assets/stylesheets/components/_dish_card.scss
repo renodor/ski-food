@@ -4,20 +4,36 @@
     max-height: 500px;
     object-fit: cover;
   }
-  h1 {
-    padding: 25px 10px 10px 10px;
-    font-size: 30px;
-    text-align: center;
-    color: $red;
-  }
-  .ingredients-grid {
+  .dish-card-info {
+    padding: 0 30px;
     background-color: white;
-    border: 2px dashed $dark-gray;
-    margin: 0 25px;
-    padding: 20px;
-    border-radius: 5px;
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    text-align: center;
+    .dish-card-info-top {
+      border-bottom: 2px dashed $dark-gray;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 25px 10px 20px 10px;
+      h1 {
+        margin: 0 15px 0 0;
+        padding-right: 15px;
+        padding-top: 5px;
+        border-right: 1px solid $gray;
+        font-size: 30px;
+        text-align: center;
+        color: $red;
+
+      }
+      span {
+        font-weight: 600;
+      }
+    }
+    .ingredients-grid {
+      margin: 0 25px;
+      padding: 20px;
+      border-radius: 5px;
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      text-align: center;
+    }
   }
 }

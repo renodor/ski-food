@@ -12,6 +12,14 @@
 @import "components/index";
 @import "pages/index";
 
+html {
+  scroll-behavior: smooth;
+}
+
+
+a {
+  color: $dark-gray
+}
 
 h2 {
   color: $red;

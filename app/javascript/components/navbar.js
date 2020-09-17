@@ -12,10 +12,10 @@ const navBar = () => {
     }
 
     const menuToggle = document.getElementById('menu-toggle');
-    menuToggle.addEventListener('click', event => {
+    menuToggle.addEventListener('click', (event) => {
       event.currentTarget.classList.toggle('active');
-    })
+    });
   }
-}
+};
 
 export default navBar;

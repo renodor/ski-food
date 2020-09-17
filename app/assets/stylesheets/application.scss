@@ -28,5 +28,5 @@ h2 {
 
 .main-container {
   min-height: calc(100vh - 180px);
-  margin-top: 80px;
+  margin-top: $navbar-height;
 }

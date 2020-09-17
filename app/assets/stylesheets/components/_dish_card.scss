@@ -1,18 +1,18 @@
 .dish-card {
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
   img {
     width: 100%;
     max-height: 500px;
     object-fit: cover;
   }
   .dish-card-info {
-    padding: 0 30px;
+    padding: 25px 55px 30px 55px;
     background-color: white;
     .dish-card-info-top {
-      border-bottom: 2px dashed $dark-gray;
       display: flex;
       justify-content: center;
       align-items: center;
-      padding: 25px 10px 20px 10px;
+      padding: 0 10px 20px 10px;
       h1 {
         margin: 0 15px 0 0;
         padding-right: 15px;
@@ -28,12 +28,16 @@
       }
     }
     .ingredients-grid {
-      margin: 0 25px;
       padding: 20px;
-      border-radius: 5px;
       display: grid;
       grid-template-columns: 1fr 1fr 1fr;
+      border-top  : 2px dashed $dark-gray;
+      border-bottom: 2px dashed $dark-gray;
       text-align: center;
+    }
+    p {
+      margin-top: 25px;
+      margin-bottom: 0;
     }
   }
 }

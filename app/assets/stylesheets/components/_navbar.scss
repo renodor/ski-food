@@ -1,6 +1,7 @@
 .navbar-skifood {
   justify-content: space-between;
-  background: transparent;
+  background: white;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
   position: fixed;
   padding: 8px 0 8px 25px;
   top: 0;
@@ -10,12 +11,17 @@
   .navbar-brand {
     display: flex;
     align-items: flex-start;
-    color: white;
+    color: $dark-gray;
     transition: color .4s ease;
     svg {
       width: 45px;
       margin-right: 20px;
-      .logo-element {
+      #haut, #bas {
+        fill: $dark-gray;
+        transition: fill .4s ease;
+      }
+      #steak {
+        fill: $red;
         transition: fill .4s ease;
       }
     }
@@ -43,9 +49,6 @@
       align-items: center;
       height: 30px;
       width: 40px;
-      &:focus {
-        outline: none;
-      }
       span {
         height: 2px;
         width: 100%;
@@ -57,7 +60,7 @@
         content: '';
         height: 2px;
         width: 100%;
-        background-color: white;
+        background-color: $dark-gray;
         transition: top .1s linear .1s, bottom .1s linear .1s, transform .1s linear, background-color .2s linear;
       }
       &:before {
@@ -68,6 +71,10 @@
       }
     }
     &.active .menu-toggle-inner {
+      span {
+        background-color: transparent;
+        transition: background-color .2s linear;
+      }
       &:before {
         top: 14px;
         transform: rotate(45deg);
@@ -78,33 +85,28 @@
         transform: rotate(-45deg);
         transition: bottom .1s linear, transform .1s linear .1s;
       }
-      span {
-        background-color: rgba(0,0,0,0);
-        transition: background-color .2s linear;
-      }
     }
   }
-  &.white {
-    background-color: white;
-    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
+  &.navbar-transparent {
+    background-color: transparent;
+    box-shadow: none;
     .navbar-brand {
-      color: $dark-gray;
+      color: white;
       transition: color .4s ease;
       svg {
-        .logo-element {
+        #haut, #bas {
+          fill: white;
           transition: fill .4s ease;
         }
-        #haut, #bas {
-          fill: $dark-gray;
-        }
         #steak {
-          fill: $red;
+          fill: white;
+          transition: fill .4s ease;
         }
       }
     }
     #menu-toggle .menu-toggle-inner {
       &:before, &:after {
-        background-color: $dark-gray;
+        background-color: white;
       }
     }
   }

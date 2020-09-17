@@ -14,7 +14,7 @@
 
   <body>
     <div class="main-container">
-      <%= render 'shared/navbar' %>
+      <%= render partial: 'shared/navbar', locals: { navbar_type: '' } %>
       <%= render 'shared/flashes' %>
       <%= yield %>
     </div>

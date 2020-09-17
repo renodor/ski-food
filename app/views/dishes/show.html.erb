@@ -1,4 +1,7 @@
-<div class="container">
-  <%= @dish.name %>
-  <%= @dish.description %>
+<div class="dish-card">
+  <%= cl_image_tag @dish.photo.key %>
+  <h1><%= @dish.name %></h1>
+  <div class="container">
+    <%= @dish.description %>
+  </div>
 </div>

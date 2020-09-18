@@ -2,12 +2,10 @@
   <%= simple_form_for(@dish) do |f| %>
     <%= f.input :name %>
     <%= f.input :description %>
-    <%= f.input 'blabla', input_html: {value: 'something', name: 'dish[ingredients][]'}  %>
-    <%= f.input 'blabla', input_html: {value: 'something', name: 'dish[ingredients][]'}  %>
-    <%= f.input 'blabla', input_html: {value: 'something', name: 'dish[ingredients][]'}  %>
-    <%= f.input 'blabla', input_html: {value: 'something', name: 'dish[ingredients][]'}  %>
+    <% @dish.ingredients.each_with_index do |ingredient, i| %>
+      <%= f.input "Ingredient #{i+1}", input_html: {value: ingredient, name: 'dish[ingredients][]'}  %>
+    <% end %>
     <%= f.input :photo, as: :file %>
     <%= f.submit %>
   <% end %>
 </div>
-

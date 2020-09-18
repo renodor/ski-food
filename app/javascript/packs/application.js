@@ -28,7 +28,9 @@ import 'bootstrap';
 
 // Internal imports, e.g:
 import navBar from '../components/navbar';
+import dishForm from '../components/dish_form';
 
 document.addEventListener('turbolinks:load', () => {
   navBar();
+  dishForm();
 });

@@ -13,7 +13,7 @@ cheesemountain = Category.create!(name: 'cheesemountain')
 burgers = Category.create!(name: 'burgers')
 paninis = Category.create!(name: 'paninis')
 americains = Category.create!(name: 'americains')
-sandwitches = Category.create!(name: 'sandiwtches')
+sandwitches = Category.create!(name: 'sandwitches')
 
 p "----------> #{Category.count} categories created"
 

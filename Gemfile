@@ -39,6 +39,8 @@ gem 'cloudinary', '~> 1.16.0'
 # helper to handle svg files
 gem 'inline_svg'
 
+gem 'globalize', '~> 5.3.0'
+
 group :development, :test do
   gem 'dotenv-rails'
   gem 'pry-byebug'

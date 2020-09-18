@@ -10,17 +10,17 @@ class DishesController < ApplicationController
   end
 
   def update
-    dish_params[:ingredients]
     @dish = Dish.find(params[:id])
-    cleaned_params = dish_params
-    cleaned_params[:ingredients] = cleaned_params[:ingredients].split(',')
-    @dish.update(cleaned_params)
-    redirect_to dish_path(@dish)
+    if @dish.update(dish_params)
+      redirect_to dish_path(@dish)
+    else
+      render :edit
+    end
   end
 
   private
 
   def dish_params
-    params.require(:dish).permit(:name, :description, :ingredients, photo: [])
+    params.require(:dish).permit(:name, :description, ingredients: [], photo: [])
   end
 end

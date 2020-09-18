@@ -2,8 +2,12 @@
   <%= simple_form_for(@dish) do |f| %>
     <%= f.input :name %>
     <%= f.input :description %>
-    <%= f.input :ingredients %>
+    <%= f.input 'blabla', input_html: {value: 'something', name: 'dish[ingredients][]'}  %>
+    <%= f.input 'blabla', input_html: {value: 'something', name: 'dish[ingredients][]'}  %>
+    <%= f.input 'blabla', input_html: {value: 'something', name: 'dish[ingredients][]'}  %>
+    <%= f.input 'blabla', input_html: {value: 'something', name: 'dish[ingredients][]'}  %>
     <%= f.input :photo, as: :file %>
     <%= f.submit %>
   <% end %>
 </div>
+

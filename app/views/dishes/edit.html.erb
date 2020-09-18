@@ -1,0 +1,9 @@
+<div class="container mb-5">
+  <%= simple_form_for(@dish) do |f| %>
+    <%= f.input :name %>
+    <%= f.input :description %>
+    <%= f.input :ingredients %>
+    <%= f.input :photo, as: :file %>
+    <%= f.submit %>
+  <% end %>
+</div>

@@ -158,3 +158,11 @@ $navbar-height: 80px;
   }
 
 }
+
+@media (min-width: 768px) {
+  .navbar-skifood .navbar-collapse {
+    position: initial;
+    border-top: none;
+    box-shadow: none;
+  }
+}

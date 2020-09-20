@@ -26,4 +26,16 @@
       </li>
     </ul>
   </div>
+  <div class="language-selector">
+    <ul>
+      <% locales = [:fr, :en] %>
+      <% locales.each do |lo| %>
+        <% if lo == locale %>
+          <li><%= link_to 'French', request.fullpath %></li>
+        <% else %>
+          <li> <%= link_to 'English', "#{request.fullpath}/en" %></li>
+        <% end %>
+      <% end %>
+    </ul>
+  </div>
 </div>

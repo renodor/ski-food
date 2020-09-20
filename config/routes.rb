@@ -1,7 +1,6 @@
 Rails.application.routes.draw do
-  devise_for :users
-
   scope '(:locale)', locale: /fr|en/ do
+    devise_for :users
     resources :categories, only: :index
 
     resources :dishes

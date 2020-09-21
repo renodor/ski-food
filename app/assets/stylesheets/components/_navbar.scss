@@ -10,22 +10,18 @@ $navbar-height: 80px;
   z-index: 100;
   width: 100%;
   height: $navbar-height;
-  transition: background .4s ease;
   .navbar-brand {
     display: flex;
     align-items: flex-start;
     color: $dark-gray;
-    transition: color .4s ease;
     svg {
       width: 45px;
       margin-right: 20px;
       #haut, #bas {
         fill: $dark-gray;
-        transition: fill .4s ease;
       }
       #steak {
         fill: $red;
-        transition: fill .4s ease;
       }
     }
     .navbar-name {
@@ -105,15 +101,46 @@ $navbar-height: 80px;
       }
     }
     .language-selector {
-      padding: 10px;
+      padding: 10px 0 10px 10px;
       button {
-        width: 25px;
+        width: 30px;
         border: none;
         background-color: transparent;
         padding: 0;
         &:focus {
           outline: none;
         }
+      }
+      .dropdown-menu {
+        min-width: 0;
+        .dropdown-item {
+          padding: 10px 15px;
+          svg {
+            width: 35px;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 550px) {
+  .navbar-skifood {
+    .navbar-brand {
+      margin-right: 0;
+      svg {
+        width: 40px;
+      }
+      .navbar-name {
+        font-size: 40px;
+      }
+    }
+    .navbar-right {
+      #menu-toggle {
+        padding: 15px 20px;
+      }
+      .language-selector button {
+        width: 25px;
       }
     }
   }
@@ -155,7 +182,7 @@ $navbar-height: 80px;
 }
 
 @media (min-width: 768px) {
-  .navbar-skifood .navbar-collapse {
+  .navbar-skifood .navbar-right .navbar-collapse {
     position: initial;
     border-top: none;
     box-shadow: none;

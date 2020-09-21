@@ -27,7 +27,7 @@ h2 {
 }
 
 .main-container {
-  min-height: calc(100vh - 180px);
+  min-height: calc(100vh - #{$navbar-height} - #{$footer-height});
   margin-top: $navbar-height;
 }
 

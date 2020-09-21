@@ -1,4 +1,8 @@
 fr:
+  navbar:
+    menu: "Menu"
+    location: "Où nous trouver?"
+    contact: "Contact"
   hp-carousel:
     slide1_html: "Les Meilleurs Cheese&shy;Mountain de l'Univers!"
     slide2_html: "Eat, Ski, Repeat"

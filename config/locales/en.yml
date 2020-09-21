@@ -30,6 +30,20 @@
 # available at https://guides.rubyonrails.org/i18n.html.
 
 en:
+  navbar:
+    menu: "Menu"
+    location: "Where to find us?"
+    contact: "Contact"
   hp-carousel:
-    slide1: "Best CheeseMountain Burgers of the Universe!"
-    slide2: "Eat, Ski & Repeat"
+    slide1_html: "Best Cheese&shy;Mountain Burgers of the Universe!"
+    slide2_html: "Eat, Ski & Repeat"
+  number:
+    currency:
+      format:
+        delimiter: " "
+        format: "%n %u"
+        precision: 2
+        separator: ","
+        significant: false
+        strip_insignificant_zeros: false
+        unit: "€"

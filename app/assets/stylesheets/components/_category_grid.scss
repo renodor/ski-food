@@ -1,10 +1,4 @@
-.categories-container {
-  margin: 30px 0;
-  position: relative;
-  #menu {
-    position: absolute;
-    top: calc(-30px - #{$navbar-height});
-  }
+.categories {
   .category-title {
     display:flex;
     align-items: center;

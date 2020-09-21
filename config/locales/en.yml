@@ -37,6 +37,13 @@ en:
   hp-carousel:
     slide1_html: "Best Cheese&shy;Mountain Burgers of the Universe!"
     slide2_html: "Eat, Ski & Repeat"
+  activerecord:
+    attributes:
+      dish:
+        name: "Name"
+        price: "Price"
+        Description: "Description"
+        Ingredients: "Ingredients"
   number:
     currency:
       format:

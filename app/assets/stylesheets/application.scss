@@ -36,11 +36,19 @@ h2 {
 }
 
 .section {
-  margin: 50px 0;
+  margin: 50px auto;
   position: relative;
 }
 
 .hp-anchor-link {
   position: absolute;
   top: calc(-30px - #{$navbar-height});
+}
+
+
+@media (max-width: 575px) {
+  .section {
+    padding-left: 0;
+    padding-right: 0;
+  }
 }

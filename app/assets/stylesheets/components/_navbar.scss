@@ -1,131 +1,135 @@
 $navbar-height: 80px;
 
-.navbar-skifood {
-  justify-content: space-between;
-  background: white;
-  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
+.navbar-container {
+  background-color: white;
   position: fixed;
-  padding: 9px 25px;
-  top: 0;
-  z-index: 100;
-  width: 100%;
   height: $navbar-height;
-  .navbar-brand {
-    display: flex;
-    align-items: flex-start;
-    color: $dark-gray;
-    svg {
-      width: 45px;
-      margin-right: 20px;
-      #haut, #bas {
-        fill: $dark-gray;
-      }
-      #steak {
-        fill: $red;
-      }
-    }
-    .navbar-name {
-      font-family: "Azedo Bold", "Helvetica", "sans-serif";
-      line-height: 1;
-      font-size: 50px;
-      span:nth-child(2) {
-        color: $red;
-      }
-    }
-  }
-  .navbar-right {
-    display: flex;
-    align-items: center;
-    #menu-toggle {
-      padding: 15px 25px;
-      &:focus {
-        outline: none;
-      }
-      .menu-toggle-inner {
-        display: flex;
-        padding: 0;
-        position: relative;
-        align-items: center;
-        height: 30px;
-        width: 40px;
-        span {
-          height: 2px;
-          width: 100%;
-          background-color: $red;
-          transition: background-color .2s linear;
+  z-index: 1001;
+  width: 100%;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
+  .navbar-skifood {
+    // max-width: 1400px;
+    // margin: 0 auto;
+    justify-content: space-between;
+    padding: 9px 25px;
+    .navbar-brand {
+      display: flex;
+      align-items: flex-start;
+      color: $dark-gray;
+      svg {
+        width: 45px;
+        margin-right: 20px;
+        #haut, #bas {
+          fill: $dark-gray;
         }
-        &:before, &:after {
-          position: absolute;
-          content: '';
-          height: 2px;
-          width: 100%;
-          background-color: $dark-gray;
-          transition: top .1s linear .1s, bottom .1s linear .1s, transform .1s linear, background-color .2s linear;
-        }
-        &:before {
-          top: 0;
-        }
-        &:after {
-          bottom: 0;
+        #steak {
+          fill: $red;
         }
       }
-      &.active .menu-toggle-inner {
-        span {
-          background-color: transparent;
-          transition: background-color .2s linear;
-        }
-        &:before {
-          top: 14px;
-          transform: rotate(45deg);
-          transition: top .1s linear, transform .1s linear .1s;
-        }
-        &:after {
-          bottom: 14px;
-          transform: rotate(-45deg);
-          transition: bottom .1s linear, transform .1s linear .1s;
+      .navbar-name {
+        font-family: "Azedo Bold", "Helvetica", "sans-serif";
+        line-height: 1;
+        font-size: 50px;
+        span:nth-child(2) {
+          color: $red;
         }
       }
     }
-    .navbar-collapse {
-      position: absolute;
-      top: 80px;
-      left: 0px;
-      width: 100%;
-      padding: 0 25px;
-      background-color: white;
-      border-top: 1px solid #d7d7d7;
-      box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
-      transition: height 0.35s ease, background .4s ease;
-      .navbar-nav {
-        padding: 10px 0;
-      }
-    }
-    .language-selector {
-      padding: 10px 0 10px 10px;
-      button {
-        width: 30px;
-        border: none;
-        background-color: transparent;
-        padding: 0;
+    .navbar-right {
+      display: flex;
+      align-items: center;
+      #menu-toggle {
+        padding: 15px 25px;
         &:focus {
           outline: none;
         }
+        .menu-toggle-inner {
+          display: flex;
+          padding: 0;
+          position: relative;
+          align-items: center;
+          height: 30px;
+          width: 40px;
+          span {
+            height: 2px;
+            width: 100%;
+            background-color: $red;
+            transition: background-color .2s linear;
+          }
+          &:before, &:after {
+            position: absolute;
+            content: '';
+            height: 2px;
+            width: 100%;
+            background-color: $dark-gray;
+            transition: top .1s linear .1s, bottom .1s linear .1s, transform .1s linear, background-color .2s linear;
+          }
+          &:before {
+            top: 0;
+          }
+          &:after {
+            bottom: 0;
+          }
+        }
+        &.active .menu-toggle-inner {
+          span {
+            background-color: transparent;
+            transition: background-color .2s linear;
+          }
+          &:before {
+            top: 14px;
+            transform: rotate(45deg);
+            transition: top .1s linear, transform .1s linear .1s;
+          }
+          &:after {
+            bottom: 14px;
+            transform: rotate(-45deg);
+            transition: bottom .1s linear, transform .1s linear .1s;
+          }
+        }
       }
-      .dropdown-menu {
-        min-width: 0;
-        .dropdown-item {
-          padding: 10px 15px;
-          svg {
-            width: 35px;
+      .navbar-collapse {
+        position: absolute;
+        top: 80px;
+        left: 0px;
+        width: 100%;
+        padding: 0 25px;
+        background-color: white;
+        border-top: 1px solid #d7d7d7;
+        box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
+        transition: height 0.35s ease, background .4s ease;
+        .navbar-nav {
+          padding: 10px 0;
+        }
+      }
+      .language-selector {
+        padding: 10px 0 10px 10px;
+        button {
+          width: 30px;
+          border: none;
+          background-color: transparent;
+          padding: 0;
+          &:focus {
+            outline: none;
+          }
+        }
+        .dropdown-menu {
+          min-width: 0;
+          .dropdown-item {
+            padding: 10px 15px;
+            svg {
+              width: 35px;
+            }
           }
         }
       }
     }
   }
+
 }
 
 @media (max-width: 550px) {
-  .navbar-skifood {
+  .navbar-container .navbar-skifood {
     .navbar-brand {
       margin-right: 0;
       svg {
@@ -147,7 +151,7 @@ $navbar-height: 80px;
 }
 
 @media (max-width: 400px) {
-  .navbar-skifood {
+  .navbar-container .navbar-skifood {
     padding: 9px 15px;
     .navbar-brand {
       margin-right: 0;
@@ -182,7 +186,7 @@ $navbar-height: 80px;
 }
 
 @media (min-width: 768px) {
-  .navbar-skifood .navbar-right .navbar-collapse {
+  .navbar-container .navbar-skifood .navbar-right .navbar-collapse {
     position: initial;
     border-top: none;
     box-shadow: none;

@@ -5,7 +5,7 @@ $navbar-height: 80px;
   background: white;
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
   position: fixed;
-  padding: 9px 0 9px 25px;
+  padding: 9px 25px;
   top: 0;
   z-index: 100;
   width: 100%;
@@ -37,94 +37,83 @@ $navbar-height: 80px;
       }
     }
   }
-  .navbar-collapse {
-    position: absolute;
-    top: 80px;
-    left: 0px;
-    width: 100%;
-      background-color: white;
-      padding: 0 25px;
-    border-top: 1px solid #d7d7d7;
-    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
-    transition: height 0.35s ease, background .4s ease;
-    .navbar-nav {
-      padding: 10px 0;
-    }
-  }
-  #menu-toggle {
-    padding: 15px 25px;
-    &:focus {
-      outline: none;
-    }
-    .menu-toggle-inner {
-      display: flex;
-      padding: 0;
-      position: relative;
-      align-items: center;
-      height: 30px;
-      width: 40px;
-      span {
-        height: 2px;
-        width: 100%;
-        background-color: $red;
-        transition: background-color .2s linear;
+  .navbar-right {
+    display: flex;
+    align-items: center;
+    #menu-toggle {
+      padding: 15px 25px;
+      &:focus {
+        outline: none;
       }
-      &:before, &:after {
-        position: absolute;
-        content: '';
-        height: 2px;
-        width: 100%;
-        background-color: $dark-gray;
-        transition: top .1s linear .1s, bottom .1s linear .1s, transform .1s linear, background-color .2s linear;
-      }
-      &:before {
-        top: 0;
-      }
-      &:after {
-        bottom: 0;
-      }
-    }
-    &.active .menu-toggle-inner {
-      span {
-        background-color: transparent;
-        transition: background-color .2s linear;
-      }
-      &:before {
-        top: 14px;
-        transform: rotate(45deg);
-        transition: top .1s linear, transform .1s linear .1s;
-      }
-      &:after {
-        bottom: 14px;
-        transform: rotate(-45deg);
-        transition: bottom .1s linear, transform .1s linear .1s;
-      }
-    }
-  }
-  &.navbar-transparent {
-    background-color: transparent;
-    box-shadow: none;
-    .navbar-brand {
-      color: white;
-      transition: color .4s ease;
-      svg {
-        #haut, #bas {
-          fill: white;
-          transition: fill .4s ease;
+      .menu-toggle-inner {
+        display: flex;
+        padding: 0;
+        position: relative;
+        align-items: center;
+        height: 30px;
+        width: 40px;
+        span {
+          height: 2px;
+          width: 100%;
+          background-color: $red;
+          transition: background-color .2s linear;
         }
-        #steak {
-          fill: white;
-          transition: fill .4s ease;
+        &:before, &:after {
+          position: absolute;
+          content: '';
+          height: 2px;
+          width: 100%;
+          background-color: $dark-gray;
+          transition: top .1s linear .1s, bottom .1s linear .1s, transform .1s linear, background-color .2s linear;
+        }
+        &:before {
+          top: 0;
+        }
+        &:after {
+          bottom: 0;
+        }
+      }
+      &.active .menu-toggle-inner {
+        span {
+          background-color: transparent;
+          transition: background-color .2s linear;
+        }
+        &:before {
+          top: 14px;
+          transform: rotate(45deg);
+          transition: top .1s linear, transform .1s linear .1s;
+        }
+        &:after {
+          bottom: 14px;
+          transform: rotate(-45deg);
+          transition: bottom .1s linear, transform .1s linear .1s;
         }
       }
     }
     .navbar-collapse {
-      background-color: rgba(255, 255, 255, 0.7);
+      position: absolute;
+      top: 80px;
+      left: 0px;
+      width: 100%;
+      padding: 0 5px;
+      background-color: white;
+      border-top: 1px solid #d7d7d7;
+      box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
       transition: height 0.35s ease, background .4s ease;
+      .navbar-nav {
+        padding: 10px 0;
+      }
     }
-    #menu-toggle .menu-toggle-inner {
-      &:before, &:after {
-        background-color: white;
+    .language-selector {
+      padding: 10px;
+      button {
+        width: 25px;
+        border: none;
+        background-color: transparent;
+        padding: 0;
+        &:focus {
+          outline: none;
+        }
       }
     }
   }
@@ -132,31 +121,37 @@ $navbar-height: 80px;
 
 @media (max-width: 400px) {
   .navbar-skifood {
+    padding: 9px 15px;
     .navbar-brand {
       margin-right: 0;
       svg {
-        width: 35px;
+        width: 30px;
       }
       .navbar-name {
-        font-size: 40px;
+        font-size: 38px;
       }
     }
-    #menu-toggle {
-      .menu-toggle-inner {
-        height: 26px;
-        width: 35px;
+    .navbar-right {
+      #menu-toggle {
+        padding: 15px 10px;
+        .menu-toggle-inner {
+          height: 26px;
+          width: 35px;
+        }
+        &.active .menu-toggle-inner {
+          &:before {
+            top: 12px;
+          }
+          &:after {
+            bottom: 12px;
+          }
+        }
       }
-      &.active .menu-toggle-inner {
-        &:before {
-          top: 12px;
-        }
-        &:after {
-          bottom: 12px;
-        }
+      .language-selector {
+        padding: 10px 0px 10px 5px;
       }
     }
   }
-
 }
 
 @media (min-width: 768px) {

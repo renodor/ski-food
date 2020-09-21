@@ -6,36 +6,41 @@
     </div>
   <% end %>
 
-  <button id="menu-toggle" class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-    <div class="menu-toggle-inner">
-      <span></span>
+  <div class="navbar-right">
+    <button id="menu-toggle" class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <div class="menu-toggle-inner">
+        <span></span>
+      </div>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav ml-auto">
+        <li class="nav-item">
+          <%= link_to "Menu", root_path(anchor: 'menu'), class: "nav-link" %>
+        </li>
+        <li class="nav-item">
+          <%= link_to "Où nous trouver ?", root_path(anchor: 'location'), class: "nav-link" %>
+        </li>
+        <li class="nav-item">
+          <%= link_to "Contact", root_path(anchor: 'contact'), class: "nav-link" %>
+        </li>
+      </ul>
     </div>
-  </button>
 
-
-  <div class="collapse navbar-collapse" id="navbarSupportedContent">
-    <ul class="navbar-nav ml-auto">
-      <li class="nav-item">
-        <%= link_to "Menu", root_path(anchor: 'menu'), class: "nav-link" %>
-      </li>
-      <li class="nav-item">
-        <%= link_to "Où nous trouver ?", root_path(anchor: 'location'), class: "nav-link" %>
-      </li>
-      <li class="nav-item">
-        <%= link_to "Contact", root_path(anchor: 'contact'), class: "nav-link" %>
-      </li>
-    </ul>
-  </div>
-  <div class="language-selector">
-    <ul>
-      <% locales = [:fr, :en] %>
-      <% locales.each do |lo| %>
-        <% if lo == locale %>
-          <li><%= link_to 'French', request.fullpath %></li>
-        <% else %>
-          <li> <%= link_to 'English', "#{request.fullpath}/en" %></li>
+    <div class="language-selector dropdown">
+      <button class="" type="button" id="languageSelectorBtn" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+        <%= inline_svg_tag("flags/#{locale.to_s}.svg") %>
+      </button>
+      <div class="dropdown-menu dropdown-menu-right" aria-labelledby="languageSelectorBtn">
+        <% @my_locales.each do |my_locale| %>
+          <% unless my_locale == locale.to_s %>
+            <% new_path = request.fullpath %>
+            <% new_path[1, 2] = my_locale %>
+              <%= link_to new_path, class: 'dropdown-item' do %>
+                <%= inline_svg_tag("flags/#{my_locale}.svg") %>
+              <% end %>
+          <% end %>
         <% end %>
-      <% end %>
-    </ul>
+      </div>
+    </div>
   </div>
 </div>

@@ -9,10 +9,13 @@ $navbar-height: 80px;
   width: 100%;
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
   .navbar-skifood {
-    // max-width: 1400px;
-    // margin: 0 auto;
     justify-content: space-between;
-    padding: 9px 25px;
+    padding-top: 9px;
+    padding-bottom: 9px;
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
     .navbar-brand {
       display: flex;
       align-items: flex-start;
@@ -129,8 +132,9 @@ $navbar-height: 80px;
 
 }
 
-@media (max-width: 550px) {
+@media (max-width: 575px) {
   .navbar-container .navbar-skifood {
+    padding: 9px 25px;
     .navbar-brand {
       margin-right: 0;
       svg {

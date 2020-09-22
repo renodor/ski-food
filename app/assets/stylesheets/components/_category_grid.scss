@@ -2,7 +2,7 @@
   .category-title {
     display:flex;
     align-items: center;
-    margin: 10px;
+    margin: 10px 0;
     h2 {
       margin: 0 20px 0 0;
     }
@@ -14,9 +14,20 @@
   }
 }
 
-@media (max-width: 400px) {
-  .categories h2 {
-    font-size: 1.5rem;
+@media (max-width: 575px) {
+  .categories .category-title {
+    margin-left: 25px;
+    h2 {
+      font-size: 1.8rem;
+    }
   }
+}
 
+@media (max-width: 400px) {
+  .categories .category-title {
+    margin: 10px;
+    h2 {
+      font-size: 1.5rem;
+    }
+  }
 }

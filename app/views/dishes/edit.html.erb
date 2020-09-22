@@ -5,11 +5,20 @@
     <%= f.input :description, as: :text %>
     <div class="ingredients-wrapper">
       <p><b>Ingredients</b></p>
-      <% @dish.ingredients.each_with_index do |ingredient, i| %>
-        <div class="form-group ingredient-field">
-          <%= text_field_tag 'dish[ingredients][]', ingredient, class: "form-control"  %>
-          <i class="fas fa-trash-alt"></i>
-        </div>
+      <% if @dish.ingredients %>
+        <% @dish.ingredients.each_with_index do |ingredient, i| %>
+          <div class="form-group ingredient-field">
+            <%= text_field_tag 'dish[ingredients][]', ingredient, class: "form-control"  %>
+            <i class="fas fa-trash-alt"></i>
+          </div>
+        <% end %>
+      <% else %>
+        <% 3.times do %>
+          <div class="form-group ingredient-field">
+            <%= text_field_tag 'dish[ingredients][]', nil, class: "form-control"  %>
+            <i class="fas fa-trash-alt"></i>
+          </div>
+        <% end %>
       <% end %>
     </div>
     <div class="text-right">

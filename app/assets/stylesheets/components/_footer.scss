@@ -1,10 +1,9 @@
-$footer-height: 130px;
+$footer-height: 280px;
 
 #footer {
   position: relative;
   background-color: $dark-gray;
-  min-height: 100px;
-  // height: $footer-height;
+  min-height: $footer-height;;
   color: white;
   padding: 40px 25px;
   font-size: 15px;

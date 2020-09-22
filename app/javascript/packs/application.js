@@ -28,9 +28,11 @@ import 'bootstrap';
 
 // Internal imports, e.g:
 import navBar from '../components/navbar';
+import animateOnScroll from '../components/animate_on_scroll';
 import dishForm from '../components/dish_form';
 
 document.addEventListener('turbolinks:load', () => {
   navBar();
+  animateOnScroll();
   dishForm();
 });

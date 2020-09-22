@@ -7,7 +7,7 @@
     </div>
     <div class="dish-grid">
       <% category.dishes.each do |dish| %>
-        <div class="dish-grid-card">
+        <div class="dish-grid-card animated" data-animation-on-scroll="fade-up">
           <%= cl_image_tag dish.photo.key, height: 300, width: 400, crop: :fill %>
           <div class="dish-grid-card-right">
             <h3><%= dish.name %></h3>

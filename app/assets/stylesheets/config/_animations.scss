@@ -1,0 +1,33 @@
+@keyframes fade-up {
+  0% {
+    opacity: 0;
+    transform: translate3d(0, 100%, 0);
+  }
+  100% {
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+@keyframes fade-down {
+  0% {
+    opacity: 0;
+    transform: translate3d(0, -100%, 0);
+  }
+  100% {
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+.animated {
+  opacity: 0;
+  &.fade-up {
+    opacity: 1;
+    animation: fade-up .7s ease;
+  }
+  &.fade-down {
+    opacity: 1;
+    animation: fade-down 1s ease;
+  }
+}

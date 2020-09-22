@@ -6,6 +6,10 @@ fr:
   hp-carousel:
     slide1_html: "Les Meilleurs Cheese&shy;Mountain de l'Univers!"
     slide2_html: "Eat, Ski, Repeat"
+  footer:
+    hours: "Horaires"
+    hours_detail: "Tous les jours de 9h à 18h"
+    about: "à Propos"
   activerecord:
     attributes:
       dish:

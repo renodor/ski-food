@@ -4,11 +4,40 @@ $footer-height: 130px;
   position: relative;
   background-color: $dark-gray;
   min-height: 100px;
-  height: $footer-height;
+  // height: $footer-height;
   color: white;
-  padding: 25px;
+  padding: 40px 25px;
   font-size: 15px;
-  p {
+  .footer-grid {
     opacity: 0.7;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-column-gap: 30px;
+    .footer-item {
+      margin-bottom: 30px;
+      h4 {
+        display: flex;
+        align-items: flex-end;
+        font-size: 16px;
+        font-weight: lighter;
+        margin-bottom: 15px;
+        svg {
+          width: 40px;
+          fill: white;
+          margin: 0 10px 5px 0;
+        }
+      }
+      i {
+        margin-right: 5px;
+      }
+    }
+  }
+}
+
+@media (max-width: 767px) {
+  #footer {
+    .footer-grid {
+      grid-template-columns: 1fr;
+    }
   }
 }

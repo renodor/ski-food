@@ -1,8 +1,20 @@
 <div id="footer">
   <div class="container">
     <div id="contact" class="hp-anchor-link"></div>
-    <p><b>CONTACT</b></p>
-    <p><i class="fas fa-phone"></i> 0600000000</p>
-    <p><i class="fas fa-envelope"></i> contact@skifood.fr</p>
+    <div class="footer-grid">
+      <div class="footer-item">
+        <h4><%= inline_svg_tag('montagne.svg') %> <b> <%= t('navbar.contact') %></b></h4>
+        <p><i class="fas fa-phone"></i> 0600000000</p>
+        <p><i class="fas fa-envelope"></i> contact@skifood.fr</p>
+      </div>
+      <div class="footer-item">
+        <h4><%= inline_svg_tag('montagne.svg') %> <b><%= t('footer.hours') %></b></h4>
+        <p><%= t('footer.hours_detail') %></p>
+      </div>
+      <div class="footer-item">
+        <h4><%= inline_svg_tag('montagne.svg') %> <b><%= t('footer.about') %></b></h4>
+        <p>Lorem ipsum dolor, sit, amet consectetur adipisicing elit. Placeat ipsa, similique neque mollitia, dignissimos vero nostrum sit nemo! Quia ipsam enim magni molestiae, cupiditate excepturi similique voluptatum, odit numquam a!</p>
+      </div>
+    </div>
   </div>
 </div>

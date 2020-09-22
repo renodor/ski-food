@@ -2,9 +2,7 @@
   <div class="navbar-expand-md navbar-skifood container <%= navbar_type %>">
     <%= link_to root_path, class: "navbar-brand" do %>
       <%= inline_svg_tag("logo-skifood2.svg") %>
-      <div class="navbar-name">
-        <span>SKI</span> <span>FOOD</span>
-      </div>
+      <%= inline_svg_tag("logo-skifood-name.svg", class: 'navbar-name') %>
     <% end %>
 
     <div class="navbar-right">

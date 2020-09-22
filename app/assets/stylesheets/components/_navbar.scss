@@ -31,13 +31,7 @@ $navbar-height: 80px;
         }
       }
       .navbar-name {
-        font-family: "Azedo Bold", "Helvetica", "sans-serif";
-        margin-top: 5px;
-        line-height: 1;
-        font-size: 50px;
-        span:nth-child(2) {
-          color: $red;
-        }
+        width: 180px;
       }
     }
     .navbar-right {
@@ -142,7 +136,7 @@ $navbar-height: 80px;
         width: 40px;
       }
       .navbar-name {
-        font-size: 40px;
+        width: 151px;
       }
     }
     .navbar-right {
@@ -165,7 +159,7 @@ $navbar-height: 80px;
         width: 30px;
       }
       .navbar-name {
-        font-size: 38px;
+        width: 130px;
       }
     }
     .navbar-right {

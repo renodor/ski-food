@@ -9,7 +9,7 @@ fr:
   activerecord:
     attributes:
       dish:
-        name: "Name"
+        name: "Nom"
         price: "Prix"
         Description: "Description"
         Ingredients: "Ingredients"

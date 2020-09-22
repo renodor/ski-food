@@ -1,5 +1,10 @@
 <div class="container section">
   <div class="dish-card">
+    <% if current_user&.admin %>
+      <%= link_to edit_dish_path(@dish), class: 'edit-dish-card' do %>
+         <i class="fas fa-pen"></i>
+      <% end %>
+    <% end %>
     <%= cl_image_tag @dish.photo.key %>
     <div class="dish-card-info">
       <div class="dish-card-info-top">

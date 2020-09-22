@@ -18,7 +18,10 @@ html {
 
 
 a {
-  color: $dark-gray
+  color: $dark-gray;
+  &:hover {
+    text-decoration: none;
+  }
 }
 
 h2 {

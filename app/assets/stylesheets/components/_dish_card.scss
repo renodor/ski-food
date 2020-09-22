@@ -1,6 +1,25 @@
 .dish-card {
   box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
   margin-bottom: 30px;
+  .edit-dish-card {
+    position: absolute;
+    top: 20px;
+    right: 50px;
+    width: 50px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    background-color: $dark-gray;
+    border-radius: 50%;
+    border: 3px solid white;
+    opacity: 0.8;
+    transition: opacity .3s ease;
+    &:hover {
+      opacity: 1;
+    }
+  }
   img {
     width: 100%;
     height: 300px;
@@ -41,6 +60,12 @@
       margin-top: 25px;
       margin-bottom: 0;
     }
+  }
+}
+
+@media (max-width: 575px) {
+  .dish-card .edit-dish-card {
+    right: 20px;
   }
 }
 

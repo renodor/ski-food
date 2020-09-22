@@ -1,5 +1,6 @@
 class DishesController < ApplicationController
   skip_before_action :authenticate_user!, only: :show
+  before_action :check_user_authorization, except: :show
 
   def show
     @dish = Dish.includes(photo_attachment: :blob).find(params[:id])
@@ -33,6 +34,13 @@ class DishesController < ApplicationController
   end
 
   private
+
+  def check_user_authorization
+    return if current_user.admin
+
+    flash.alert = 'Need to be Admin to access this page'
+    redirect_to root_path
+  end
 
   def dish_params
     params.require(:dish).permit(:name, :price, :description, :category, :photo, ingredients: [])

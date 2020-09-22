@@ -20,6 +20,18 @@
   }
 }
 
+@keyframes pulse {
+  0% {
+    transform: translate(0, 0);
+  }
+  30% {
+    transform: translate(0, 10px);
+  }
+  100% {
+    transform: translate(0, 0);
+  }
+}
+
 .animated {
   opacity: 0;
   &.fade-up {
@@ -29,5 +41,9 @@
   &.fade-down {
     opacity: 1;
     animation: fade-down 1s ease;
+  }
+  &.pulse {
+    opacity: 1;
+    animation: pulse 2s infinite;
   }
 }

@@ -6,4 +6,15 @@
       bottom: 20%;
     }
   }
+  .chevron-down-link {
+    position: absolute;
+    bottom: 0;
+    padding-bottom: 30px;
+    width: 100%;
+    text-align: center;
+    i {
+      color: white;
+      font-size: 40px;
+    }
+  }
 }

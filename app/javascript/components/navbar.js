@@ -1,5 +1,5 @@
 const navBar = () => {
-  const navBar = document.querySelector('.navbar');
+  const navBar = document.querySelector('.navbar-skifood');
 
   const toggleNavbarTransparent = () => {
     if (window.scrollY >= navBar.offsetHeight) {

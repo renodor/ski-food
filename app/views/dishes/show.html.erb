@@ -11,7 +11,7 @@
         <h1><%= @dish.name %></h1>
         <span><%= number_to_currency(@dish.price, precision: 2) %></span>
       </div>
-      <% unless @dish.ingredients.empty? %>
+      <% if @dish.ingredients %>
         <div class="ingredients-grid">
           <% @dish.ingredients.each do |ingredient| %>
             <span><%= ingredient.capitalize %></span>

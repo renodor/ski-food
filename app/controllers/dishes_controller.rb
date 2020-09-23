@@ -13,7 +13,7 @@ class DishesController < ApplicationController
   end
 
   def create
-    @dish = Dish.new(dish_params)
+    @dish = Dish.new(cleaned_params)
     unless params[:dish][:category_id].empty?
       @dish.category = Category.find(params[:dish][:category_id])
     end
@@ -30,7 +30,7 @@ class DishesController < ApplicationController
 
   def update
     @dish = Dish.find(params[:id])
-    if @dish.update(dish_params)
+    if @dish.update(cleaned_params)
       redirect_to dish_path(@dish)
     else
       render :edit
@@ -49,5 +49,12 @@ class DishesController < ApplicationController
   def dish_params
     params.require(:dish)
           .permit(:name, :price, :description, :order, :category, :photo, ingredients: [])
+  end
+
+  # remove empty strings from ingredients array
+  def cleaned_params
+    cleaned_params = dish_params
+    cleaned_params[:ingredients].reject!(&:empty?)
+    cleaned_params
   end
 end

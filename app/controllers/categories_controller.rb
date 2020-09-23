@@ -9,6 +9,8 @@ class CategoriesController < ApplicationController
   end
 
   def new
+    # new dishes need first to be created in the default locale, and then translated
+    redirect_to new_category_path(locale: I18n.default_locale) if locale != I18n.default_locale
     @category = Category.new
   end
 

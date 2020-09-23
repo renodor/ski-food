@@ -14,7 +14,9 @@ class DishesController < ApplicationController
 
   def create
     @dish = Dish.new(dish_params)
-    @dish.category = Category.find(params[:dish][:category_id])
+    unless params[:dish][:category_id].empty?
+      @dish.category = Category.find(params[:dish][:category_id])
+    end
     if @dish.save
       redirect_to dish_path(@dish)
     else

@@ -3,6 +3,7 @@
     <%= f.input :name %>
     <%= f.input :price %>
     <%= f.input :description, as: :text %>
+    <%= f.association :category %>
     <div class="ingredients-wrapper">
       <p><b>Ingredients</b></p>
       <% if @dish.ingredients %>

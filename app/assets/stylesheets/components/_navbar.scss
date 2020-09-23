@@ -121,8 +121,12 @@ $navbar-height: 80px;
         }
         .dropdown-menu {
           min-width: 0;
-          .dropdown-item {
+          .language-selector-item {
             padding: 10px 15px;
+            cursor: pointer;
+            &:hover {
+              background-color: transparent;
+            }
             svg {
               width: 35px;
             }

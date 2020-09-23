@@ -3,6 +3,7 @@ class CategoriesController < ApplicationController
 
   def index
     @categories = Category.includes(dishes: [:translations, { photo_attachment: :blob }])
+                          .order(order: :asc)
     render layout: 'home_page'
   end
 end

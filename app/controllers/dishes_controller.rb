@@ -54,7 +54,7 @@ class DishesController < ApplicationController
   # remove empty strings from ingredients array
   def cleaned_params
     cleaned_params = dish_params
-    cleaned_params[:ingredients].reject!(&:empty?)
+    cleaned_params[:ingredients]&.reject!(&:empty?)
     cleaned_params
   end
 end

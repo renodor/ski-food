@@ -49,6 +49,9 @@ en:
         description: "Description"
         ingredients: "Ingredients"
         order: "Order"
+      dish:
+        name: "Name"
+        order: "Order"
   number:
     currency:
       format:

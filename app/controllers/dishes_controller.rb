@@ -30,6 +30,9 @@ class DishesController < ApplicationController
 
   def update
     @dish = Dish.find(params[:id])
+    unless params[:dish][:category_id].empty?
+      @dish.category = Category.find(params[:dish][:category_id])
+    end
     if @dish.update(cleaned_params)
       redirect_to dish_path(@dish)
     else

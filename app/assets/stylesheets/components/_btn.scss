@@ -1,0 +1,12 @@
+.submit-btn {
+  padding: 20px;
+  background-color: $red;
+  color: white;
+  font-weight: 600;
+  opacity: 0.9;
+  transition: opacity .2s ease;
+  border-radius: 3px;
+  &:hover {
+    opacity: 1;
+  }
+}

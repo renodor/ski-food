@@ -4,6 +4,11 @@
     <div class="category-title">
       <h2><%= category.name %></h2>
       <%= inline_svg_tag("category-icons/#{category.name.gsub(' ', '')}.svg") %>
+      <% if current_user&.admin %>
+        <%= link_to edit_category_path(category), class: 'edit-category' do %>
+           <i class="fas fa-pen"></i>
+        <% end %>
+      <% end %>
     </div>
     <div class="dish-grid">
       <% category.dishes.each do |dish| %>

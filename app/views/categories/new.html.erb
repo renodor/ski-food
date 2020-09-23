@@ -1,6 +1,7 @@
 <div class="container mt-110 mb-5 dish-form">
   <%= simple_form_for(@category) do |f| %>
     <%= f.input :name %>
+    <%= f.input :order %>
     <%= f.submit value: 'CREER UNE CATEGORIE', class: 'btn submit-btn w-100' %>
   <% end %>
 </div>

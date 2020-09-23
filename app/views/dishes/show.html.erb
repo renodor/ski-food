@@ -1,7 +1,7 @@
 <div class="container section">
   <div class="dish-card animated fade-down">
     <% if current_user&.admin %>
-      <%= link_to edit_dish_path(@dish), class: 'edit-dish-card' do %>
+      <%= link_to edit_dish_path(@dish), class: 'edit-dish' do %>
          <i class="fas fa-pen"></i>
       <% end %>
     <% end %>

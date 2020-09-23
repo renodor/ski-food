@@ -30,9 +30,11 @@ import 'bootstrap';
 import navBar from '../components/navbar';
 import animateOnScroll from '../components/animate_on_scroll';
 import dishForm from '../components/dish_form';
+import languageSelection from '../components/language_selection';
 
 document.addEventListener('turbolinks:load', () => {
   navBar();
   animateOnScroll();
   dishForm();
+  languageSelection();
 });

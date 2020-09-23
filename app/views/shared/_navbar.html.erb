@@ -32,11 +32,9 @@
         <div class="dropdown-menu dropdown-menu-right" aria-labelledby="languageSelectorBtn">
           <% @my_locales.each do |my_locale| %>
             <% unless my_locale == locale.to_s %>
-              <% new_path = request.fullpath.dup %>
-              <% new_path[1, 2] = my_locale %>
-                <%= link_to new_path, class: 'dropdown-item' do %>
-                  <%= inline_svg_tag("flags/#{my_locale}.svg") %>
-                <% end %>
+              <span class="dropdown-item language-selector-item" data-locale="<%= my_locale %>">
+                <%= inline_svg_tag("flags/#{my_locale}.svg") %>
+              </span>
             <% end %>
           <% end %>
         </div>

@@ -7,10 +7,19 @@ const languageSelecion = () => {
     languageSelectorItems.forEach((languageSelectorItem) => {
       languageSelectorItem.addEventListener('click', (event) => {
         const locale = event.currentTarget.dataset.locale;
-        let path = window.location.pathname;
-        path = path.slice(3, path.length);
-        path = `/${locale}${path}${location.hash}`;
-        window.location.href = path;
+        const currentPath = window.location.pathname;
+        let newPath = '';
+
+        // check if the current locale is written in the url
+        // if yes replace it with the new locale
+        // if no just add the new locale at the beginning of the url
+        if (currentPath[3] == '/' || currentPath.length == 3) {
+          const currentPathWithoutLocale = currentPath.slice(3, currentPath.length);
+          newPath = `/${locale}${currentPathWithoutLocale}${window.location.hash}`;
+        } else {
+          newPath = `/${locale}${currentPath}${window.location.hash}`;
+        }
+        window.location.href = newPath;
       });
     });
   }

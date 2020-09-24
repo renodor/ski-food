@@ -3,7 +3,8 @@ class CategoriesController < ApplicationController
   before_action :check_user_authorization, except: :index
 
   def index
-    @categories = Category.includes(dishes: [:translations, { photo_attachment: :blob }])
+    @categories = Category.includes(:translations,
+                                    dishes: [:translations, { photo_attachment: :blob }])
                           .order(order: :asc)
     render layout: 'home_page'
   end
